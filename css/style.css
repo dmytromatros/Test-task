@@ -111,23 +111,10 @@ h6 {
 }
 
 /*--------------------*/
-$blue: #67aefc;
-$light-blue: #daecff;
-$dark-blue: #6d79ef;
-$green: #75e169;
-$font: "Montserrat", sans-serif;
-
-@mixin main-btn {
-  background-color: $green;
-  border-radius: 5px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 15px;
-}
 body {
-  font-family: $font;
+  font-family: "Montserrat", sans-serif;
 }
+
 .container {
   max-width: 1170px;
 }
