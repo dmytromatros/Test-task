@@ -124,10 +124,57 @@ $font: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 15px;
+  text-transform: uppercase;
+  color: white;
 }
 body {
   font-family: $font;
 }
 .container {
   max-width: 1170px;
+  margin: auto;
+  height: 100%;
+}
+.header {
+  width: 100%;
+  height: 95px;
+  background-color: $blue;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__logo {
+  }
+
+  &__navigation {
+    max-width: 620px;
+    width: 620px;
+  }
+
+  &__menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    li {
+      display: inline;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: capitalize;
+      color: #fff;
+    }
+  }
+
+  &__button {
+    @include main-btn;
+    padding: 10px 42px;
+  }
+}
+.container {
 }
