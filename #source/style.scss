@@ -183,8 +183,6 @@ body {
     padding: 10px 42px;
   }
 }
-.main {
-}
 .first-block {
   min-height: 766px;
   width: 100%;
@@ -228,10 +226,21 @@ body {
         right: 0px;
         bottom: 136px;
       }
+      &:nth-child(4) {
+        display: none;
+      }
+      &:nth-child(5) {
+        display: none;
+      }
+      &:nth-child(6) {
+        display: none;
+      }
+      &:nth-child(7) {
+        display: none;
+      }
     }
   }
   &__inner {
-    position: absolute;
     padding-top: 171px;
     z-index: 12;
   }
@@ -249,7 +258,7 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
-    width: 432px;
+    max-width: 432px;
   }
 
   &__button {
@@ -260,5 +269,71 @@ body {
     }
   }
 }
+.service-block {
+  min-height: 703px;
+  background-color: $light-blue;
+  padding-top: 120px;
+  position: relative;
+  &__titel {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 125%;
+    /* or 40px */
+    text-align: center;
+    margin-bottom: 80px;
+  }
 
+  &__inner {
+    width: 100%;
+    ul {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      li {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 175%;
+        min-height: 61px;
+        border-radius: 15px;
+        background-color: #fff;
+        padding-top: 14px;
+        .service-block__li-title {
+          &::before {
+            content: "";
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            background-color: $green;
+            border-radius: 50%;
+            margin-left: -52px;
+          }
+          overflow: hidden;
+          padding-left: 96px;
+          display: flex;
+          align-items: center;
+          width: 100%;
+        }
+        .service-block__full-text {
+          width: 100%;
+          height: 70px;
+          margin-top: 34px;
+          margin-left: 56px;
+          padding: 9px 94px 9px 40px;
+          margin-bottom: 47px;
+          border-left: 1px solid #000;
+        }
+      }
+    }
+  }
+  img {
+    position: absolute;
+    right: 145px;
+    bottom: 92px;
+  }
+}
 @import "_media";
