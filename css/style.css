@@ -356,6 +356,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 24px;
   width: 100%;
 }
 
@@ -371,7 +375,6 @@ body {
 
 .service-block__inner ul li .service-block__full-text {
   width: 100%;
-  height: 70px;
   margin-top: 34px;
   margin-left: 56px;
   padding: 9px 94px 9px 40px;
@@ -379,7 +382,7 @@ body {
   border-left: 1px solid #000;
 }
 
-.service-block img {
+.service-block #bag {
   position: absolute;
   right: 145px;
   bottom: 92px;
