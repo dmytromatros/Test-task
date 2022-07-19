@@ -2,6 +2,11 @@
   .container {
     padding: 0 20px;
   }
+  #bag {
+    position: absolute;
+    right: 0px;
+    bottom: -28px;
+  }
 }
 @media (max-width: 900px) {
   .header {
@@ -139,6 +144,94 @@
           margin-left: 5%;
         }
       }
+    }
+  }
+}
+@media (max-width: 570px) {
+  .main-title {
+    font-size: 23px;
+  }
+  .service-block__inner {
+    ul {
+      li {
+        padding-top: 22px;
+        font-size: 17px;
+        line-height: 175%;
+        .service-block__li-title {
+          padding-left: 57px;
+          align-items: flex-start;
+          &::before {
+            content: "";
+            margin-top: 9px;
+            width: 15px;
+            height: 15px;
+            margin-left: -33px;
+          }
+          .list-btn {
+            padding-top: 9px;
+            align-items: flex-start;
+          }
+        }
+        .service-block__full-text {
+          margin-left: 32px;
+          padding-left: 25px;
+        }
+      }
+    }
+  }
+  .service-block {
+    padding-top: 16px;
+    padding-bottom: 30px;
+    #bag {
+      display: none;
+    }
+  }
+}
+@media (max-width: 740px) {
+  .stages-block {
+    padding-top: 42px;
+    .container {
+      #whiteball {
+        width: 38px;
+        height: 38px;
+        left: -15px;
+        top: -24px;
+      }
+    }
+    &__slide {
+      width: 100%;
+      min-width: 100%;
+      height: auto;
+      border: 2px solid $blue;
+      border-radius: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-left: 0px;
+      padding-right: 0px;
+      padding-top: 27px;
+      align-items: justify;
+    }
+    &__annotation {
+      width: 100%;
+      padding-left: 33px;
+      padding-right: 29px;
+    }
+    &__slide-title {
+      font-size: 23px;
+    }
+    &__slide-text {
+      width: auto;
+      font-size: 17px;
+    }
+    &__slide-img {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+    &__arrows {
+      gap: 107px;
     }
   }
 }
