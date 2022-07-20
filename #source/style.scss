@@ -282,6 +282,7 @@ body {
 
   &__inner {
     width: 100%;
+    margin-top: 80px;
     ul {
       width: 100%;
       display: flex;
@@ -375,6 +376,7 @@ body {
 
   &__inner {
     overflow: hidden;
+    margin-top: 84px;
   }
 
   &__slider-block {
@@ -448,6 +450,9 @@ body {
   padding-top: 121px;
   padding-bottom: 121px;
   overflow-x: hidden;
+  .container {
+    position: relative;
+  }
   &__inner {
     margin-top: 51px;
   }
@@ -477,6 +482,51 @@ body {
     background-size: cover;
     background-position: center;
     border-radius: 15px;
+    position: relative;
+    &::before {
+      content: attr(data-big-text);
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      background-color: $blue;
+      transition: 0.3s;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 21px;
+      line-height: 125%;
+      color: #fff;
+      opacity: 0;
+    }
+    &::after {
+      content: attr(data-small-text);
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 175%;
+      color: #fff;
+      padding-top: 55px;
+      opacity: 0;
+      transition: 0.3s;
+    }
+    &:hover::before {
+      opacity: 1;
+    }
+    &:hover::after {
+      opacity: 1;
+    }
   }
 
   &__second-col {
@@ -502,6 +552,16 @@ body {
 
   &__arrows {
   }
+  #examp-wave {
+    position: absolute;
+    left: -355px;
+    top: 180px;
+  }
+  #examp-ball {
+    position: absolute;
+    right: -247px;
+    bottom: 123px;
+  }
 }
 
 .main-title {
@@ -513,7 +573,7 @@ body {
   line-height: 125%;
   /* or 40px */
   text-align: center;
-  margin-bottom: 80px;
+  // margin-bottom: 80px;
   z-index: 1;
 }
 @import "_media";

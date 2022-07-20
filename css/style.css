@@ -316,6 +316,7 @@ body {
 
 .service-block__inner {
   width: 100%;
+  margin-top: 80px;
 }
 
 .service-block__inner ul {
@@ -440,6 +441,7 @@ body {
 
 .stages-block__inner {
   overflow: hidden;
+  margin-top: 84px;
 }
 
 .stages-block__slider-block {
@@ -532,6 +534,10 @@ body {
   overflow-x: hidden;
 }
 
+.examples-block .container {
+  position: relative;
+}
+
 .examples-block__inner {
   margin-top: 51px;
 }
@@ -561,6 +567,69 @@ body {
   background-size: cover;
   background-position: center;
   border-radius: 15px;
+  position: relative;
+}
+
+.examples-block__example-small::before {
+  content: attr(data-big-text);
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-color: #67aefc;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 125%;
+  color: #fff;
+  opacity: 0;
+}
+
+.examples-block__example-small::after {
+  content: attr(data-small-text);
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 175%;
+  color: #fff;
+  padding-top: 55px;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.examples-block__example-small:hover::before {
+  opacity: 1;
+}
+
+.examples-block__example-small:hover::after {
+  opacity: 1;
 }
 
 .examples-block__second-col .examples-block__example-small:nth-child(1) {
@@ -586,6 +655,18 @@ body {
   gap: 38px;
 }
 
+.examples-block #examp-wave {
+  position: absolute;
+  left: -355px;
+  top: 180px;
+}
+
+.examples-block #examp-ball {
+  position: absolute;
+  right: -247px;
+  bottom: 123px;
+}
+
 .main-title {
   position: relative;
   font-family: "Montserrat";
@@ -595,7 +676,6 @@ body {
   line-height: 125%;
   /* or 40px */
   text-align: center;
-  margin-bottom: 80px;
   z-index: 1;
 }
 
