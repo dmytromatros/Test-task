@@ -186,6 +186,9 @@
       display: none;
     }
   }
+  .examples-block {
+    padding-top: 23px;
+  }
 }
 @media (max-width: 740px) {
   .stages-block {
@@ -235,5 +238,58 @@
     }
   }
 }
+@media (max-width: 380px) {
+  .stages-block {
+    &__slide-img {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
 @media (max-width: 1190px) {
+  .examples-block {
+    min-height: auto;
+    padding-bottom: 30px;
+    &__example-main {
+      display: flex;
+      gap: 33px;
+    }
+    &__first-col,
+    &__second-col {
+      min-width: 100%;
+      align-items: center;
+    }
+    &__arrows {
+      display: flex;
+    }
+  }
+}
+@media (max-width: 620px) {
+  .examples-block {
+    &__example-main {
+      display: flex;
+      // gap: 33px;
+    }
+    &__first-col,
+    &__second-col {
+      min-width: 100%;
+      align-items: center;
+    }
+    &__example-small {
+      max-width: 335px;
+      max-height: 260px;
+      width: 100%;
+      &::before {
+        font-weight: 800;
+        font-size: 17px;
+        line-height: 27px;
+      }
+      &::after {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 175%;
+      }
+    }
+  }
 }

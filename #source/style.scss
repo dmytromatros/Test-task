@@ -460,6 +460,7 @@ body {
   &__example-main {
     display: flex;
     gap: 33px;
+    transition: 0.3s;
   }
 
   &__first-col {
@@ -551,6 +552,26 @@ body {
   }
 
   &__arrows {
+    width: 100%;
+    display: none;
+    justify-content: center;
+    gap: 107px;
+    margin-top: 30px;
+    button {
+      &:hover {
+        background-image: url("../img/active-arrow.png");
+      }
+    }
+  }
+  &__left-arrows,
+  &__right-arrows {
+    background-color: transparent;
+    background-image: url(../img/right-arrow.png);
+    width: 60px;
+    height: 60px;
+  }
+  &__left-arrows {
+    transform: rotate(180deg);
   }
   #examp-wave {
     position: absolute;

@@ -547,6 +547,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 33px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .examples-block__first-col .examples-block__example-small:nth-child(1) {
@@ -653,6 +655,32 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 38px;
+}
+
+.examples-block__arrows {
+  width: 100%;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 107px;
+  margin-top: 30px;
+}
+
+.examples-block__arrows button:hover {
+  background-image: url("../img/active-arrow.png");
+}
+
+.examples-block__left-arrows, .examples-block__right-arrows {
+  background-color: transparent;
+  background-image: url(../img/right-arrow.png);
+  width: 60px;
+  height: 60px;
+}
+
+.examples-block__left-arrows {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .examples-block #examp-wave {
@@ -854,6 +882,9 @@ body {
   .service-block #bag {
     display: none;
   }
+  .examples-block {
+    padding-top: 23px;
+  }
 }
 
 @media (max-width: 740px) {
@@ -913,5 +944,64 @@ body {
   }
   .stages-block__arrows {
     gap: 107px;
+  }
+}
+
+@media (max-width: 380px) {
+  .stages-block__slide-img img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1190px) {
+  .examples-block {
+    min-height: auto;
+    padding-bottom: 30px;
+  }
+  .examples-block__example-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 33px;
+  }
+  .examples-block__first-col, .examples-block__second-col {
+    min-width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .examples-block__arrows {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width: 620px) {
+  .examples-block__example-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .examples-block__first-col, .examples-block__second-col {
+    min-width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .examples-block__example-small {
+    max-width: 335px;
+    max-height: 260px;
+    width: 100%;
+  }
+  .examples-block__example-small::before {
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 27px;
+  }
+  .examples-block__example-small::after {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 175%;
   }
 }

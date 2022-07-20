@@ -1,6 +1,20 @@
 "use strict";
 servicesList();
-stageSlider();
+funcSlider(
+  ".stages-block__left-arrows",
+  ".stages-block__right-arrows",
+  ".stages-block__slider-block",
+  ".stages-block__slide",
+  5
+);
+funcSlider(
+  ".examples-block__left-arrows",
+  ".examples-block__right-arrows",
+  ".examples-block__example-main",
+  ".examples-block__first-col",
+  2
+);
+
 function servicesList() {
   let listBtn = document.querySelectorAll(".list-btn");
   listBtn.forEach((element) => {
@@ -58,16 +72,22 @@ function servicesList() {
     false
   );
 }
-function stageSlider() {
-  let leftArrow = document.querySelector(".stages-block__left-arrows");
-  let rightArrow = document.querySelector(".stages-block__right-arrows");
-  let allSlides = document.querySelector(".stages-block__slider-block");
-  let oneSlide = document.querySelector(".stages-block__slide");
+function funcSlider(
+  leftArrowPar,
+  rightArrowPar,
+  allSlidesPar,
+  oneSlidePar,
+  slideCountPar
+) {
+  let leftArrow = document.querySelector(leftArrowPar);
+  let rightArrow = document.querySelector(rightArrowPar);
+  let allSlides = document.querySelector(allSlidesPar);
+  let oneSlide = document.querySelector(oneSlidePar);
   let slideWidth = oneSlide.clientWidth + 4 + 25;
   window.addEventListener(`resize`, () => {
     slideWidth = oneSlide.clientWidth + 4 + 25;
   });
-  let slideCount = 5;
+  let slideCount = slideCountPar;
   let clickCount = 0;
   leftArrow.addEventListener("click", () => {
     rightArrow.removeAttribute("disabled");
