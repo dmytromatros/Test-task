@@ -126,6 +126,9 @@ $font: "Montserrat", sans-serif;
   font-size: 15px;
   text-transform: uppercase;
   color: white;
+  &:hover {
+    border: solid 2px $blue;
+  }
 }
 body {
   font-family: $font;
@@ -455,6 +458,7 @@ body {
   }
   &__inner {
     margin-top: 51px;
+    overflow-x: hidden;
   }
 
   &__example-main {
@@ -582,6 +586,135 @@ body {
     position: absolute;
     right: -247px;
     bottom: 123px;
+  }
+}
+.more-block {
+  min-height: 724px;
+  overflow-x: hidden;
+  padding-top: 214px;
+  .container {
+    position: relative;
+    .more-title-big {
+      text-align: left;
+    }
+  }
+  .more-title-small {
+    display: none;
+  }
+  .more-sphere {
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    left: -221px;
+    top: -67px;
+  }
+  &__inner {
+    width: 100%;
+    display: flex;
+    gap: 37px;
+  }
+  &__text-block {
+    max-width: 670px;
+    width: 670px;
+  }
+
+  &__subtitle {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    margin-top: 53px;
+    margin-bottom: 45px;
+  }
+
+  &__button {
+    button {
+      @include main-btn;
+      padding: 23px 56px;
+    }
+  }
+
+  &__img-block {
+    position: relative;
+    img {
+      position: absolute;
+      top: -70px;
+    }
+  }
+}
+.contact-block {
+  min-height: 774px;
+  background-color: $light-blue;
+  padding-top: 180px;
+  padding-bottom: 128px;
+  overflow-x: hidden;
+  position: relative;
+  .container {
+    position: relative;
+  }
+  img {
+    position: absolute;
+  }
+  #phone {
+    top: 85px;
+    left: -50px;
+  }
+  #contact-wave {
+    right: 0;
+    top: 100px;
+  }
+  &__inner {
+    max-width: 480px;
+    margin: auto;
+  }
+
+  &__subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 175%;
+    text-align: center;
+    margin-bottom: 27px;
+    margin-top: 35px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    input {
+      max-width: 470px;
+      width: 470px;
+      height: 58px;
+      background-color: #fff;
+      padding-left: 14px;
+      border: solid 1px $blue;
+      border-radius: 10px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      &:focus {
+        border: solid 2px $blue;
+      }
+    }
+    button {
+      @include main-btn;
+      padding: 23px 84px;
+      width: 270px;
+      margin: auto;
+      margin-top: 10px;
+    }
+  }
+
+  &__name-input {
+  }
+
+  &__telegram-input {
+  }
+
+  &__email-input {
   }
 }
 
