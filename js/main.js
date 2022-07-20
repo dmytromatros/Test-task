@@ -14,7 +14,9 @@ funcSlider(
   ".examples-block__first-col",
   2
 );
-
+// contactValid();
+let address = document.querySelector(".contact-block__email-input");
+address.addEventListener("input", validate);
 function servicesList() {
   let listBtn = document.querySelectorAll(".list-btn");
   listBtn.forEach((element) => {
@@ -107,4 +109,14 @@ function funcSlider(
     }px)`;
     clickCount -= slideWidth;
   });
+}
+function validate() {
+  const EMAIL_REGEXP =
+    /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+
+  if (EMAIL_REGEXP.test(address.value)) {
+    console.log("yes");
+  } else {
+    console.log("no");
+  }
 }

@@ -64,8 +64,6 @@
 }
 @media (max-width: 970px) {
   .contact-block {
-    img {
-    }
     #phone {
       width: 25%;
       top: 40%;
@@ -203,6 +201,51 @@
   }
 }
 @media (max-width: 700px) {
+  .contact-block {
+    min-height: 774px;
+    background-color: $light-blue;
+    padding-top: 42px;
+    padding-bottom: 25px;
+    overflow-x: hidden;
+    position: relative;
+    #phone,
+    #contact-wave {
+      display: none;
+    }
+    #contact-small {
+      width: 60%;
+      min-width: 285px;
+      display: block;
+      margin: auto;
+      margin-top: 42px;
+      position: relative;
+    }
+    &__inner {
+      max-width: 400px;
+      width: 100%;
+    }
+
+    &__subtitle {
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 175%;
+    }
+
+    &__form {
+      width: 100%;
+      input {
+        width: 100%;
+        max-width: 100%;
+      }
+      button {
+        @include main-btn;
+        padding: 23px 84px;
+        width: 270px;
+        margin: auto;
+        margin-top: 10px;
+      }
+    }
+  }
 }
 @media (max-width: 670px) {
   .first-block {
@@ -363,6 +406,20 @@
   }
   .examples-block {
     padding-top: 23px;
+  }
+}
+@media (max-width: 570px) {
+  .contact-block {
+    &__inner {
+      max-width: 100%;
+    }
+    &__form {
+      gap: 10px;
+      button {
+        width: 100%;
+        margin-top: 5px;
+      }
+    }
   }
 }
 @media (max-width: 380px) {

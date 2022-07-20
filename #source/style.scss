@@ -664,6 +664,9 @@ body {
     right: 0;
     top: 100px;
   }
+  #contact-small {
+    display: none;
+  }
   &__inner {
     max-width: 480px;
     margin: auto;

@@ -805,6 +805,10 @@ body {
   top: 100px;
 }
 
+.contact-block #contact-small {
+  display: none;
+}
+
 .contact-block__inner {
   max-width: 480px;
   margin: auto;
@@ -1111,6 +1115,62 @@ body {
   }
 }
 
+@media (max-width: 700px) {
+  .contact-block {
+    min-height: 774px;
+    background-color: #daecff;
+    padding-top: 42px;
+    padding-bottom: 25px;
+    overflow-x: hidden;
+    position: relative;
+  }
+  .contact-block #phone,
+  .contact-block #contact-wave {
+    display: none;
+  }
+  .contact-block #contact-small {
+    width: 60%;
+    min-width: 285px;
+    display: block;
+    margin: auto;
+    margin-top: 42px;
+    position: relative;
+  }
+  .contact-block__inner {
+    max-width: 400px;
+    width: 100%;
+  }
+  .contact-block__subtitle {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 175%;
+  }
+  .contact-block__form {
+    width: 100%;
+  }
+  .contact-block__form input {
+    width: 100%;
+    max-width: 100%;
+  }
+  .contact-block__form button {
+    background-color: #75e169;
+    border-radius: 5px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    padding: 23px 84px;
+    width: 270px;
+    margin: auto;
+    margin-top: 10px;
+  }
+  .contact-block__form button:hover {
+    border: solid 2px #67aefc;
+  }
+}
+
 @media (max-width: 670px) {
   .first-block {
     font-size: 1em;
@@ -1274,6 +1334,19 @@ body {
   }
   .examples-block {
     padding-top: 23px;
+  }
+}
+
+@media (max-width: 570px) {
+  .contact-block__inner {
+    max-width: 100%;
+  }
+  .contact-block__form {
+    gap: 10px;
+  }
+  .contact-block__form button {
+    width: 100%;
+    margin-top: 5px;
   }
 }
 
