@@ -16,6 +16,7 @@ funcSlider(
 );
 burgerMenu();
 contactCheck();
+scrollMenu();
 function burgerMenu() {
   let burgerBtn = document.querySelector(".header__burger-button");
   let burgerMenu = document.querySelector(".header__burger-menu");
@@ -43,6 +44,29 @@ function burgerMenu() {
         document.querySelector(".stages-block").scrollIntoView(true);
       }
       if (e.classList.contains("burger-designer")) {
+        document.querySelector(".contact-block").scrollIntoView(true);
+      }
+    });
+  });
+}
+function scrollMenu() {
+  let menuLi = document.querySelectorAll(".menu-li");
+  menuLi.forEach((e) => {
+    e.addEventListener("click", () => {
+      menuLi.forEach((e) => {
+        e.classList.remove("active-li");
+      });
+      e.classList.add("active-li");
+      if (e.classList.contains("menu-service")) {
+        document.querySelector(".service-block").scrollIntoView(true);
+      }
+      if (e.classList.contains("menu-portfolio")) {
+        document.querySelector(".examples-block").scrollIntoView(true);
+      }
+      if (e.classList.contains("menu-stage")) {
+        document.querySelector(".stages-block").scrollIntoView(true);
+      }
+      if (e.classList.contains("menu-designer")) {
         document.querySelector(".contact-block").scrollIntoView(true);
       }
     });

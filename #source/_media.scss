@@ -231,6 +231,8 @@
 @media (max-width: 740px) {
   .stages-block {
     padding-top: 42px;
+    padding-bottom: 45px;
+    min-height: auto;
     .container {
       #whiteball {
         width: 38px;
@@ -251,7 +253,18 @@
       padding-left: 0px;
       padding-right: 0px;
       padding-top: 27px;
-      align-items: justify;
+      align-items: stretch;
+      &:nth-child(1),
+      &:nth-child(2) {
+        img {
+          max-width: 220px;
+        }
+      }
+      &:nth-child(5) {
+        img {
+          max-width: 270px;
+        }
+      }
     }
     &__annotation {
       width: 100%;
@@ -259,11 +272,13 @@
       padding-right: 29px;
     }
     &__slide-title {
-      font-size: 23px;
+      font-size: 17px;
+      margin-bottom: 7px;
     }
     &__slide-text {
       width: auto;
       font-size: 17px;
+      line-height: 175%;
     }
     &__slide-img {
       display: flex;
@@ -272,6 +287,7 @@
       justify-content: center;
     }
     &__arrows {
+      margin-top: 25px;
       gap: 107px;
     }
   }
@@ -403,7 +419,7 @@
     }
 
     &__button {
-      margin-top: 58px;
+      margin-top: 34px;
       button {
         @include main-btn;
         width: 100%;
@@ -443,7 +459,10 @@
 }
 @media (max-width: 570px) {
   .main-title {
+    font-weight: 800;
     font-size: 23px;
+    line-height: 150%;
+    padding: 0 25px;
   }
   .service-block__inner {
     ul {
@@ -456,7 +475,7 @@
           align-items: flex-start;
           &::before {
             content: "";
-            margin-top: 9px;
+            margin-top: 6px;
             width: 15px;
             height: 15px;
             margin-left: -33px;
@@ -476,12 +495,29 @@
   .service-block {
     padding-top: 16px;
     padding-bottom: 30px;
+    min-height: auto;
     #bag {
       display: none;
+    }
+    &__inner {
+      margin-top: 17px;
+      ul {
+        li {
+          font-weight: 400;
+          font-size: 17px;
+          line-height: 175%;
+          .service-block__full-text {
+            padding-right: 70px;
+          }
+        }
+      }
     }
   }
   .examples-block {
     padding-top: 23px;
+  }
+  .stages-block__inner {
+    margin-top: 20px;
   }
 }
 @media (max-width: 570px) {
@@ -500,6 +536,13 @@
 }
 @media (max-width: 380px) {
   .stages-block {
+    .stages-block__slide {
+      &:nth-child(2) {
+        img {
+          margin: 20px 0;
+        }
+      }
+    }
     &__slide-img {
       img {
         width: 100%;

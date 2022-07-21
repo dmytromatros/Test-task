@@ -34,6 +34,7 @@ aside {
 
 html,
 body {
+  scroll-behavior: smooth;
   height: 100%;
   width: 100%;
   font-size: 100%;
@@ -46,21 +47,20 @@ body {
 
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
   /* ширина всей полосы прокрутки */
 }
 
 html::-webkit-scrollbar-track,
 body::-webkit-scrollbar-track {
-  background: #a9a9a9;
+  background: #fff;
   /* цвет зоны отслеживания */
 }
 
 html::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb {
-  background-color: #19bd9a;
+  background-color: #6d79ef;
   /* цвет бегунка */
-  border-radius: 20px;
   /* округлось бегунка */
 }
 
@@ -192,16 +192,6 @@ body {
   position: relative;
 }
 
-.header__burger-menu ul .active-li::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #fff;
-  bottom: 0;
-  left: 0;
-}
-
 .header .active-burger-menu {
   height: 328px;
   -webkit-transition: 0.3s;
@@ -227,6 +217,7 @@ body {
 }
 
 .header__menu li {
+  cursor: pointer;
   display: inline;
   font-family: "Montserrat";
   font-style: normal;
@@ -235,6 +226,7 @@ body {
   line-height: 20px;
   text-transform: capitalize;
   color: #fff;
+  padding-bottom: 5px;
 }
 
 .header__button {
@@ -250,7 +242,36 @@ body {
 }
 
 .header__button:hover {
-  border: solid 2px #67aefc;
+  outline: solid 2px #67aefc;
+}
+
+.header__button:active {
+  outline: solid 2px #67aefc;
+  background-color: #67aefc;
+}
+
+.header__button:hover {
+  outline: solid 2px #fff;
+}
+
+.header__button:active {
+  outline: solid 2px #fff;
+  background-color: #fff;
+  color: #67aefc;
+}
+
+.header .active-li {
+  position: relative;
+}
+
+.header .active-li::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
 }
 
 .first-block {
@@ -363,7 +384,12 @@ body {
 }
 
 .first-block__button button:hover {
-  border: solid 2px #67aefc;
+  outline: solid 2px #67aefc;
+}
+
+.first-block__button button:active {
+  outline: solid 2px #67aefc;
+  background-color: #67aefc;
 }
 
 .service-block {
@@ -823,7 +849,12 @@ body {
 }
 
 .more-block__button button:hover {
-  border: solid 2px #67aefc;
+  outline: solid 2px #67aefc;
+}
+
+.more-block__button button:active {
+  outline: solid 2px #67aefc;
+  background-color: #67aefc;
 }
 
 .more-block__img-block {
@@ -927,7 +958,12 @@ body {
 }
 
 .contact-block__form .contact-block__btn:hover {
-  border: solid 2px #67aefc;
+  outline: solid 2px #67aefc;
+}
+
+.contact-block__form .contact-block__btn:active {
+  outline: solid 2px #67aefc;
+  background-color: #67aefc;
 }
 
 .contact-block .email-div-erro {
@@ -1252,7 +1288,11 @@ body {
     width: 100%;
   }
   .more-block__button button:hover {
-    border: solid 2px #67aefc;
+    outline: solid 2px #67aefc;
+  }
+  .more-block__button button:active {
+    outline: solid 2px #67aefc;
+    background-color: #67aefc;
   }
   .more-block .more-title-small {
     display: block;
@@ -1347,6 +1387,8 @@ body {
 @media (max-width: 740px) {
   .stages-block {
     padding-top: 42px;
+    padding-bottom: 45px;
+    min-height: auto;
   }
   .stages-block .container #whiteball {
     width: 38px;
@@ -1371,9 +1413,15 @@ body {
     padding-left: 0px;
     padding-right: 0px;
     padding-top: 27px;
-    -webkit-box-align: justify;
-        -ms-flex-align: justify;
-            align-items: justify;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .stages-block__slide:nth-child(1) img, .stages-block__slide:nth-child(2) img {
+    max-width: 220px;
+  }
+  .stages-block__slide:nth-child(5) img {
+    max-width: 270px;
   }
   .stages-block__annotation {
     width: 100%;
@@ -1381,11 +1429,13 @@ body {
     padding-right: 29px;
   }
   .stages-block__slide-title {
-    font-size: 23px;
+    font-size: 17px;
+    margin-bottom: 7px;
   }
   .stages-block__slide-text {
     width: auto;
     font-size: 17px;
+    line-height: 175%;
   }
   .stages-block__slide-img {
     display: -webkit-box;
@@ -1400,6 +1450,7 @@ body {
             justify-content: center;
   }
   .stages-block__arrows {
+    margin-top: 25px;
     gap: 107px;
   }
 }
@@ -1456,7 +1507,11 @@ body {
     margin-top: 10px;
   }
   .contact-block__form button:hover {
-    border: solid 2px #67aefc;
+    outline: solid 2px #67aefc;
+  }
+  .contact-block__form button:active {
+    outline: solid 2px #67aefc;
+    background-color: #67aefc;
   }
 }
 
@@ -1533,7 +1588,7 @@ body {
     font-size: 8vw;
   }
   .first-block__button {
-    margin-top: 58px;
+    margin-top: 34px;
   }
   .first-block__button button {
     background-color: #75e169;
@@ -1549,7 +1604,11 @@ body {
     padding: 22px 92px;
   }
   .first-block__button button:hover {
-    border: solid 2px #67aefc;
+    outline: solid 2px #67aefc;
+  }
+  .first-block__button button:active {
+    outline: solid 2px #67aefc;
+    background-color: #67aefc;
   }
 }
 
@@ -1584,7 +1643,10 @@ body {
 
 @media (max-width: 570px) {
   .main-title {
+    font-weight: 800;
     font-size: 23px;
+    line-height: 150%;
+    padding: 0 25px;
   }
   .service-block__inner ul li {
     padding-top: 22px;
@@ -1599,7 +1661,7 @@ body {
   }
   .service-block__inner ul li .service-block__li-title::before {
     content: "";
-    margin-top: 9px;
+    margin-top: 6px;
     width: 15px;
     height: 15px;
     margin-left: -33px;
@@ -1617,12 +1679,27 @@ body {
   .service-block {
     padding-top: 16px;
     padding-bottom: 30px;
+    min-height: auto;
   }
   .service-block #bag {
     display: none;
   }
+  .service-block__inner {
+    margin-top: 17px;
+  }
+  .service-block__inner ul li {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 175%;
+  }
+  .service-block__inner ul li .service-block__full-text {
+    padding-right: 70px;
+  }
   .examples-block {
     padding-top: 23px;
+  }
+  .stages-block__inner {
+    margin-top: 20px;
   }
 }
 
@@ -1640,6 +1717,9 @@ body {
 }
 
 @media (max-width: 380px) {
+  .stages-block .stages-block__slide:nth-child(2) img {
+    margin: 20px 0;
+  }
   .stages-block__slide-img img {
     width: 100%;
   }
