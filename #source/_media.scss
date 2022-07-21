@@ -92,7 +92,7 @@
     height: 49px;
     &__logo {
       img {
-        width: 70%;
+        width: 60%;
       }
     }
   }
@@ -185,13 +185,15 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 140%;
-      gap: 0px;
+      gap: 8px;
       padding-left: 10px;
       span {
+        content: "a";
         padding-left: 28px + 16px;
-        height: 36px;
+        height: 30px;
         display: flex;
         align-items: center;
+
         &::before {
           width: 28px;
           height: 28px;
@@ -321,6 +323,8 @@
       font-weight: 400;
       font-size: 17px;
       line-height: 175%;
+      margin-top: 17px;
+      margin-bottom: 25px;
     }
 
     &__form {
@@ -439,6 +443,7 @@
     &__second-col {
       min-width: 100%;
       align-items: center;
+      gap: 15px;
     }
     &__example-small {
       max-width: 335px;
@@ -448,11 +453,13 @@
         font-weight: 800;
         font-size: 17px;
         line-height: 27px;
+        padding-bottom: 28px;
       }
       &::after {
         font-weight: 400;
         font-size: 17px;
         line-height: 175%;
+        padding-top: 28px;
       }
     }
   }
@@ -515,25 +522,28 @@
   }
   .examples-block {
     padding-top: 23px;
+    &__inner {
+      margin-top: 14px;
+    }
   }
   .stages-block__inner {
     margin-top: 20px;
   }
-}
-@media (max-width: 570px) {
   .contact-block {
     &__inner {
       max-width: 100%;
     }
     &__form {
       gap: 10px;
-      button {
+      .contact-block__btn {
         width: 100%;
         margin-top: 5px;
+        border-radius: 10px;
       }
     }
   }
 }
+
 @media (max-width: 380px) {
   .stages-block {
     .stages-block__slide {

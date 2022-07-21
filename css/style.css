@@ -562,6 +562,14 @@ body {
           align-items: center;
 }
 
+.stages-block__slide:nth-child(4) .stages-block__slide-title {
+  max-width: 270px;
+}
+
+.stages-block__slide:nth-child(2) .stages-block__slide-title {
+  max-width: 270px;
+}
+
 .stages-block__slide-title {
   font-family: "Montserrat";
   font-style: normal;
@@ -1214,7 +1222,7 @@ body {
     height: 49px;
   }
   .header__logo img {
-    width: 70%;
+    width: 60%;
   }
   .header__navigation {
     display: none;
@@ -1331,12 +1339,13 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
-    gap: 0px;
+    gap: 8px;
     padding-left: 10px;
   }
   .footer .col-2 span {
+    content: "a";
     padding-left: 44px;
-    height: 36px;
+    height: 30px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1484,6 +1493,8 @@ body {
     font-weight: 400;
     font-size: 17px;
     line-height: 175%;
+    margin-top: 17px;
+    margin-bottom: 25px;
   }
   .contact-block__form {
     width: 100%;
@@ -1623,6 +1634,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    gap: 15px;
   }
   .examples-block__example-small {
     max-width: 335px;
@@ -1633,11 +1645,13 @@ body {
     font-weight: 800;
     font-size: 17px;
     line-height: 27px;
+    padding-bottom: 28px;
   }
   .examples-block__example-small::after {
     font-weight: 400;
     font-size: 17px;
     line-height: 175%;
+    padding-top: 28px;
   }
 }
 
@@ -1698,21 +1712,22 @@ body {
   .examples-block {
     padding-top: 23px;
   }
+  .examples-block__inner {
+    margin-top: 14px;
+  }
   .stages-block__inner {
     margin-top: 20px;
   }
-}
-
-@media (max-width: 570px) {
   .contact-block__inner {
     max-width: 100%;
   }
   .contact-block__form {
     gap: 10px;
   }
-  .contact-block__form button {
+  .contact-block__form .contact-block__btn {
     width: 100%;
     margin-top: 5px;
+    border-radius: 10px;
   }
 }
 
