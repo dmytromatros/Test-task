@@ -14,9 +14,40 @@ funcSlider(
   ".examples-block__first-col",
   2
 );
+burgerMenu();
 contactCheck();
-// contactValid();
+function burgerMenu() {
+  let burgerBtn = document.querySelector(".header__burger-button");
+  let burgerMenu = document.querySelector(".header__burger-menu");
+  burgerBtn.addEventListener("click", () => {
+    console.log("click");
+    burgerMenu.classList.toggle("active-burger-menu");
+  });
 
+  // Scroll to block
+  let bergerLi = document.querySelectorAll(".burger-li");
+  bergerLi.forEach((e) => {
+    e.addEventListener("click", () => {
+      bergerLi.forEach((e) => {
+        e.classList.remove("active-li");
+      });
+      e.classList.add("active-li");
+      burgerMenu.classList.toggle("active-burger-menu");
+      if (e.classList.contains("burger-service")) {
+        document.querySelector(".service-block").scrollIntoView(true);
+      }
+      if (e.classList.contains("burger-portfolio")) {
+        document.querySelector(".examples-block").scrollIntoView(true);
+      }
+      if (e.classList.contains("burger-stage")) {
+        document.querySelector(".stages-block").scrollIntoView(true);
+      }
+      if (e.classList.contains("burger-designer")) {
+        document.querySelector(".contact-block").scrollIntoView(true);
+      }
+    });
+  });
+}
 function servicesList() {
   let listBtn = document.querySelectorAll(".list-btn");
   listBtn.forEach((element) => {
