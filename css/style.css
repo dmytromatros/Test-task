@@ -872,6 +872,96 @@ body {
   border: solid 2px #67aefc;
 }
 
+.footer {
+  min-height: 469px;
+  background-color: #67aefc;
+  padding-top: 101px;
+}
+
+.footer__inner {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
+}
+
+.footer .col-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 13px;
+  margin-left: 125px;
+  margin-right: 107px;
+}
+
+.footer .col-2 span {
+  position: relative;
+  padding-left: 31.5px;
+}
+
+.footer .col-2 span::before {
+  content: "";
+  background-image: url("../img/viber.png");
+  background-size: cover;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+.footer .col-2-icon {
+  display: none;
+}
+
+.footer .col-2,
+.footer .col-3 {
+  padding-top: 25px;
+  padding-left: 7px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.footer .col-3 {
+  text-transform: lowercase;
+}
+
+.footer__contact-icon {
+  max-width: 270px;
+  width: 100%;
+  margin-left: 5px;
+  margin-top: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__contact-icon img {
+  cursor: pointer;
+}
+
+.footer__bottom {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 175%;
+  color: #fff;
+  text-align: center;
+  margin-top: 120px;
+}
+
 .main-title {
   position: relative;
   font-family: "Montserrat";
@@ -951,6 +1041,20 @@ body {
     right: -20%;
     top: 250px;
     width: 70%;
+  }
+  .footer__inner {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer .col-2 {
+    margin: 0;
   }
 }
 
@@ -1052,6 +1156,70 @@ body {
     display: block;
     width: 100%;
     text-align: center;
+  }
+}
+
+@media (max-width: 840px) {
+  .footer {
+    padding-top: 46px;
+  }
+  .footer__inner {
+    width: 100%;
+    max-width: 280px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer__col {
+    width: 100%;
+  }
+  .footer .col-2 {
+    margin: 0;
+    padding-left: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    gap: 0px;
+  }
+  .footer .col-2 span {
+    padding-left: 44px;
+    height: 36px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer .col-2 span::before {
+    width: 28px;
+    height: 28px;
+  }
+  .footer .col-3 {
+    text-align: left;
+    padding-left: 20px;
+  }
+  .footer__contact-icon {
+    display: none;
+  }
+  .footer .col-2-icon {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 57px;
   }
 }
 
