@@ -14,7 +14,7 @@ funcSlider(
   ".examples-block__first-col",
   2
 );
-validate();
+contactCheck();
 // contactValid();
 
 function servicesList() {
@@ -110,18 +110,32 @@ function funcSlider(
     clickCount -= slideWidth;
   });
 }
+function contactCheck() {
+  let btn = document.querySelector(".contact-block__btn");
+  btn.addEventListener("click", validate);
+}
 function validate() {
+  // Email validate
   let address = document.querySelector(".contact-block__email-input");
   let btn = document.querySelector(".contact-block__btn");
+  const EMAIL_REGEXP =
+    /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{3,})$/iu;
+  if (address.value == "") {
+    address.parentElement.classList.add("email-div-erro");
+    address.style.borderColor = "rgb(255, 111, 111)";
+  }
   address.addEventListener("input", () => {
-    const EMAIL_REGEXP =
-      /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{3,})$/iu;
-
     if (EMAIL_REGEXP.test(address.value)) {
-      // btn.removeAttribute("disabled");
+      btn.setAttribute("type", "submit");
+      address.parentElement.classList.remove("email-div-erro");
       address.style.borderColor = "#67aefc";
+    } else if (address.value == "") {
+      btn.setAttribute("type", "button");
+      address.parentElement.classList.add("email-div-erro");
+      address.style.borderColor = "rgb(255, 111, 111)";
     } else {
-      // btn.setAttribute("disabled", true);
+      btn.setAttribute("type", "button");
+      address.parentElement.classList.add("email-div-erro");
       address.style.borderColor = "rgb(255, 111, 111)";
     }
   });

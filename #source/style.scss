@@ -702,12 +702,13 @@ body {
         border: solid 2px $blue;
       }
     }
-    button {
+    .contact-block__btn {
       @include main-btn;
-      padding: 23px 84px;
       width: 270px;
       margin: auto;
       margin-top: 10px;
+      border: none;
+      cursor: pointer;
     }
   }
 
@@ -717,6 +718,39 @@ body {
   &__telegram-input {
   }
 
+  .email-div-erro {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 0 solid transparent;
+      border-right-width: 8px;
+      border-left-width: 7px;
+      border-bottom: 10px solid #fff;
+      left: 5px;
+      bottom: -10px;
+      display: block;
+      transition: 0.2s;
+    }
+    &::before {
+      content: "Неверный пароль";
+      color: red;
+      letter-spacing: 1px;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+      background-color: #fff;
+      left: 0;
+      bottom: -44px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: 0.2s;
+    }
+  }
   &__email-input {
   }
 }

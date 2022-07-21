@@ -853,7 +853,7 @@ body {
   border: solid 2px #67aefc;
 }
 
-.contact-block__form button {
+.contact-block__form .contact-block__btn {
   background-color: #75e169;
   border-radius: 5px;
   font-family: "Montserrat";
@@ -862,14 +862,59 @@ body {
   font-size: 15px;
   text-transform: uppercase;
   color: white;
-  padding: 23px 84px;
   width: 270px;
   margin: auto;
   margin-top: 10px;
+  border: none;
+  cursor: pointer;
 }
 
-.contact-block__form button:hover {
+.contact-block__form .contact-block__btn:hover {
   border: solid 2px #67aefc;
+}
+
+.contact-block .email-div-erro {
+  position: relative;
+}
+
+.contact-block .email-div-erro::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-width: 8px;
+  border-left-width: 7px;
+  border-bottom: 10px solid #fff;
+  left: 5px;
+  bottom: -10px;
+  display: block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.contact-block .email-div-erro::before {
+  content: "Неверный пароль";
+  color: red;
+  letter-spacing: 1px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: auto;
+  background-color: #fff;
+  left: 0;
+  bottom: -44px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .footer {

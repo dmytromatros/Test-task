@@ -39,6 +39,7 @@
               <img src="img/burger-circle.png" alt="" />
               <img src="img/burger-circle.png" alt="" />
             </div>
+            <div class="header__burger-menu"></div>
           </div>
         </div>
       </div>
@@ -366,14 +367,20 @@
                 type="text"
                 class="contact-block__telegram-input"
                 placeholder="Telegram/Viber"
-              />
-              <input
-                type="email"
-                class="contact-block__email-input"
-                placeholder="Email"
                 required
               />
-              <button class="contact-block__btn" type="menu">Отправить</button>
+              <div class="email-div">
+                <input
+                  type="email"
+                  class="contact-block__email-input"
+                  placeholder="Email"
+                />
+              </div>
+              <input
+                class="contact-block__btn"
+                value="Отправить"
+                type="button"
+              />
             </form>
           </div>
           <img id="contact-small" src="img/contact-small.png" alt="" />
