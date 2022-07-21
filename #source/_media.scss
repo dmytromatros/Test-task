@@ -166,6 +166,7 @@
 @media (max-width: 840px) {
   .footer {
     padding-top: 46px;
+    padding-bottom: 130px;
     &__inner {
       width: 100%;
       max-width: 280px;
@@ -185,6 +186,7 @@
       font-size: 16px;
       line-height: 140%;
       gap: 0px;
+      padding-left: 10px;
       span {
         padding-left: 28px + 16px;
         height: 36px;
@@ -198,7 +200,9 @@
     }
     .col-3 {
       text-align: left;
-      padding-left: 20px;
+      padding-left: 35px;
+      padding-top: 0;
+      margin-top: 42px;
     }
     &__contact-icon {
       display: none;
@@ -206,8 +210,21 @@
     .col-2-icon {
       display: block;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
       margin-top: 57px;
+      gap: 25px;
+      width: 240px;
+    }
+    &__bottom {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: #fff;
+      text-align: center;
+      margin-top: 23px;
+      padding: 0 20px;
     }
   }
 }
