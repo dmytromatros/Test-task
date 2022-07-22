@@ -5,6 +5,7 @@ funcSlider(
   ".stages-block__right-arrows",
   ".stages-block__slider-block",
   ".stages-block__slide",
+  ".stages-block__slider-block",
   5
 );
 funcSlider(
@@ -12,6 +13,7 @@ funcSlider(
   ".examples-block__right-arrows",
   ".examples-block__example-main",
   ".examples-block__first-col",
+  ".examples-block__example-main",
   2
 );
 burgerMenu();
@@ -134,6 +136,7 @@ function funcSlider(
   rightArrowPar,
   allSlidesPar,
   oneSlidePar,
+  blockToSwipe,
   slideCountPar
 ) {
   let leftArrow = document.querySelector(leftArrowPar);
@@ -171,14 +174,14 @@ function funcSlider(
   let postEnd = 0;
   let swipeCount = 0;
 
-  let sliderBlock = document.querySelector(".stages-block__slider-block");
+  let sliderBlock = document.querySelector(blockToSwipe);
 
   sliderBlock.addEventListener("touchstart", (e) => {
     posStart = e.changedTouches[0];
   });
   sliderBlock.addEventListener("touchend", (e) => {
     postEnd = e.changedTouches[0];
-    if (posStart.pageX > postEnd.pageX) {
+    if (posStart.pageX > postEnd.pageX + 80) {
       if (swipeCount > slideCount - 2) {
         return;
       } else {
@@ -187,7 +190,7 @@ function funcSlider(
           slideWidth * swipeCount
         }px)`;
       }
-    } else if (posStart.pageX < postEnd.pageX) {
+    } else if (posStart.pageX + 80 < postEnd.pageX) {
       if (swipeCount == 0) {
         return;
       } else {
