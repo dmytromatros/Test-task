@@ -1,16 +1,17 @@
 "use strict";
 servicesList();
 funcSlider(
-  ".stages-block__left-arrows",
   ".stages-block__right-arrows",
+  ".stages-block__left-arrows",
+
   ".stages-block__slider-block",
   ".stages-block__slide",
   ".stages-block__slider-block",
   5
 );
 funcSlider(
-  ".examples-block__left-arrows",
   ".examples-block__right-arrows",
+  ".examples-block__left-arrows",
   ".examples-block__example-main",
   ".examples-block__first-col",
   ".examples-block__example-main",
