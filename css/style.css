@@ -1294,6 +1294,7 @@ body {
     color: white;
     padding: 23px 56px;
     width: 100%;
+    border-radius: 10px;
   }
   .more-block__button button:hover {
     outline: solid 2px #67aefc;
