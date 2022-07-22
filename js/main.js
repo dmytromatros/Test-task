@@ -164,6 +164,40 @@ function funcSlider(
     }px)`;
     clickCount -= slideWidth;
   });
+
+  // Move slider with swipe
+
+  let posStart = 0;
+  let postEnd = 0;
+  let swipeCount = 0;
+
+  let sliderBlock = document.querySelector(".stages-block__slider-block");
+
+  sliderBlock.addEventListener("touchstart", (e) => {
+    posStart = e.changedTouches[0];
+  });
+  sliderBlock.addEventListener("touchend", (e) => {
+    postEnd = e.changedTouches[0];
+    if (posStart.pageX > postEnd.pageX) {
+      if (swipeCount > slideCount - 2) {
+        return;
+      } else {
+        swipeCount++;
+        allSlides.style.cssText = `transform: translate(-${
+          slideWidth * swipeCount
+        }px)`;
+      }
+    } else if (posStart.pageX < postEnd.pageX) {
+      if (swipeCount == 0) {
+        return;
+      } else {
+        swipeCount--;
+        allSlides.style.cssText = `transform: translate( -${
+          slideWidth * swipeCount
+        }px)`;
+      }
+    }
+  });
 }
 function contactCheck() {
   let btn = document.querySelector(".contact-block__btn");
