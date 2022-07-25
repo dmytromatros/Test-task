@@ -86,6 +86,26 @@ function servicesList() {
       element.parentElement.classList.toggle("active-li-before");
     });
   });
+  if (window.innerWidth <= 570) {
+    let text;
+    document
+      .querySelectorAll(".service-block__inner>ul>li[id]")
+      .forEach((element) => {
+        if (element.id == "adapt") {
+          text = element.querySelector(".service-block__full-text");
+          text.textContent =
+            "Мобильная версия сайта удобна для пользователя, потому что сильно упрощена по сравнению с обычной версией. Мобильная версия позволяет совершать заказ/покупку с минимумом действий. При адаптивной версии вся структура сайта автоматически подстраивается под различную ширину экрана.";
+        } else if (element.id == "ux") {
+          text = element.querySelector(".service-block__full-text");
+          text.textContent =
+            "Микро-анимация может изменить восприятие продукта, пользовательское поведение и повысить конверсию. Небольшие, преимущественно функциональные анимации поддерживают пользователя: обеспечивают визуальную обратную связь и более понятно отражают происходящие изменения.";
+        } else if (element.id == "inter") {
+          text = element.querySelector(".service-block__full-text");
+          text.textContent =
+            "Цель дизайна пользовательского интерфейса - сделать взаимодействие максимально простым и эффективным, насколько это возможно, с точки зрения достижения целей пользователя.";
+        }
+      });
+  }
   window.addEventListener(
     `resize`,
     () => {
